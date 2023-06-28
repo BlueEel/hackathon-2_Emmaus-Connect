@@ -19,16 +19,10 @@
 		{% endblock %}
 	</head>
 
+	{% include 'includes/_navbar.html.twig' %}
 
-	{% block nav %}
-		{% include 'includes/_navbar.html.twig' %}
-	{% endblock %}
 
 	<body>
 		{% block body %}{% endblock %}
 	</body>
-
-	{% block footer %}
-		{% include 'includes/_footer.html.twig' %}
-	{% endblock %}
 </html>

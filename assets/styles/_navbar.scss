@@ -2,19 +2,19 @@ nav {
     font-family: montserrat, sans-serif;
     font-style: normal;
     font-weight: 550;
-    --bs-secondary-bg: #44ACB0;
-    --bs-dark-rgb: rgb(0, 39, 67);
+    --bs-secondary-bg: $info;
+    --bs-dark-rgb:0, 39, 67;
 }
 
 nav button.btn.btn-dark {
-    --bs-btn-bg: #44ACB0;
-    --bs-btn-active-border-color: #44ACB0;
-    --bs-btn-border-color: #44ACB0;
+    --bs-btn-bg: $info;
+    --bs-btn-active-border-color: $info;
+    --bs-btn-border-color: $info;
 }
 
 nav button.navbar-toggler {
     --bs-border-width: 0px;
-    --bs-navbar-color: #44ACB0;
+    --bs-navbar-color: $info;
 }
 
 .navbar-toggler span {
@@ -31,8 +31,8 @@ nav button.navbar-toggler {
     transform-origin: center left;
 }
 
-.navbar-toggler span.middle-bar {
-    background-color: $primary;
+.navbar-toggler span {
+    background-color: $info;
 }
 
 .navbar-toggler span:nth-child(1) {
