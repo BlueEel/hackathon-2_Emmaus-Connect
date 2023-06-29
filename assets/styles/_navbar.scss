@@ -3,7 +3,7 @@ nav {
     font-style: normal;
     font-weight: 550;
     --bs-secondary-bg: $info;
-    --bs-dark-rgb:0, 39, 67;
+    --bs-dark-rgb: 0, 39, 67;
 }
 
 nav button.btn.btn-dark {
@@ -80,4 +80,9 @@ nav button.navbar-toggler {
 
 .collapsing.mobileDropdown {
     transition: none !important;
+}
+
+.nav-link:hover {
+    background-color: $warning;
+    border-radius: 50px;
 }
