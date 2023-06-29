@@ -7,4 +7,18 @@
 	<div class="container-fluid bg-info">
 		<img src="{{ asset('build/images/Logo-emmaus-connect.svg') }}" alt="">
 	</div>
+    <h1 class="text-center m-4"> Listes des produits </h1>
+        <div class="container swiper mySwiper">
+            <div class="swiper-wrapper mt-2">
+                {% for product in products %}
+                    <div class="swiper-slide d-flex flex-column">
+                        <img class="object-fit-contain mb-3" src="../uploads/images/{{product.image }}" alt={{ product.image }}>
+                        <h3 alt="{{ product.name }}">{{ product.name }}</h3>
+                        <h4 alt="{{ product.price }}">{{ product.price }} €</h4>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
 {% endblock %}
