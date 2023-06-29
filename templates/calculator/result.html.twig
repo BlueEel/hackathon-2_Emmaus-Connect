@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello result!
+{% endblock %}
+
+{% block body %}
+	{% for result, messages in app.flashes %}
+		{% for message in messages %}
+			<div class="alert alert-{{ result }}">
+				{{ message }}
+			</div>
+		{% endfor %}
+	{% endfor %}
+	<div class="container">
+		<div class="row">
+			<div class="col-4 offset-4">
+				<div class="card m-auto bg-secondary align-items-center">
+					<div class="card-body w-75">
+						<h4 class="card-title text-center">Intégration du télephone:
+						</h4>
+                        <p class="card-title ">Marque du téléphone: {{ phone.brand }}</p>
+						<p class="card-title ">Mémoire interne: {{ phone.internalmemory }}</p>
+                        <p class="card-title ">Ram du téléphone: {{ phone.ram }}</p>
+                        <p class="card-title ">Marque du téléphone:</p> 
+						<h4 class="card-title text-center bg-primary"> Estimation du prix : {{ result }}€</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
