@@ -3,7 +3,7 @@ nav {
     font-style: normal;
     font-weight: 550;
     --bs-secondary-bg: $info;
-    --bs-dark-rgb:0, 39, 67;
+    --bs-dark-rgb: 0, 39, 67;
 }
 
 nav button.btn.btn-dark {
@@ -63,21 +63,34 @@ nav button.navbar-toggler {
     transform: translate(15%, 33%) rotate(-45deg);
 }
 
-.mobileDropdown {
-    top: 82.5px;
-    height: 100vh;
-    padding: 10vh;
+.dropdown {
+    padding: 5vh;
 }
 
-.mobileDropdown a.nav-link {
+.dropdown a.nav-link {
     --bs-nav-link-color: rgba(255, 255, 255, 1);
     --bs-nav-link-hover-color: rgba(255, 255, 255, 1);
 }
 
-.mobileDropdown .mobile {
-    padding: 1vh;
+.collapsing.dropdown {
+    transition: none !important;
 }
 
-.collapsing.mobileDropdown {
-    transition: none !important;
+.nav-link:hover {
+    background-color: $warning;
+    border-radius: 20px;
+    color: black;
+}
+
+.nav-link {
+    border-radius: 20px;
+    padding-left: 2vh;
+    padding-right: 2vh;
+}
+
+div.dropdown {
+    font-family: montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 550;
+    --bs-secondary-bg: $info;
 }
