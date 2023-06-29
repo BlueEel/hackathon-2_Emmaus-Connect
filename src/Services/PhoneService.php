@@ -25,6 +25,9 @@ class PhoneService
             case 'Huawei':
                 $prixBase += 100;
                 break;
+            case 'Android':
+                $prixBase += 100;
+                break;
             default:
                 $prixBase += 50;
                 break;
@@ -34,6 +37,8 @@ class PhoneService
             $prixBase += 50;
         } elseif ($internalmemory > 128) {
             $prixBase += 100;
+        } elseif ($internalmemory < 64) {
+            $prixBase += 25;
         }
 
         if ($ram >= 4 && $ram <= 6) {
