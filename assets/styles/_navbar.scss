@@ -1,0 +1,96 @@
+nav {
+    font-family: montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 550;
+    --bs-secondary-bg: $info;
+    --bs-dark-rgb: 0, 39, 67;
+}
+
+nav button.btn.btn-dark {
+    --bs-btn-bg: $info;
+    --bs-btn-active-border-color: $info;
+    --bs-btn-border-color: $info;
+}
+
+nav button.navbar-toggler {
+    --bs-border-width: 0px;
+    --bs-navbar-color: $info;
+}
+
+.navbar-toggler span {
+    display: block;
+    background-color: #FFFFFF;
+    height: 3px;
+    width: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    left: 0;
+    opacity: 1;
+    transition: all 0.35s ease-out;
+    transform-origin: center left;
+}
+
+.navbar-toggler span {
+    background-color: $info;
+}
+
+.navbar-toggler span:nth-child(1) {
+    transform: translate(0%, 0%) rotate(0deg);
+}
+
+.navbar-toggler span:nth-child(2) {
+    opacity: 1;
+}
+
+.navbar-toggler span:nth-child(3) {
+    transform: translate(0%, 0%) rotate(0deg);
+}
+
+.navbar-toggler span:nth-child(1) {
+    margin-top: 0.3em;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+    transform: translate(15%, -33%) rotate(45deg);
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+    transform: translate(15%, 33%) rotate(-45deg);
+}
+
+.dropdown {
+    padding: 5vh;
+}
+
+.dropdown a.nav-link {
+    --bs-nav-link-color: rgba(255, 255, 255, 1);
+    --bs-nav-link-hover-color: rgba(255, 255, 255, 1);
+}
+
+.collapsing.dropdown {
+    transition: none !important;
+}
+
+.nav-link:hover {
+    background-color: $warning;
+    border-radius: 20px;
+    color: black;
+}
+
+.nav-link {
+    border-radius: 20px;
+    padding-left: 2vh;
+    padding-right: 2vh;
+}
+
+div.dropdown {
+    font-family: montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 550;
+    --bs-secondary-bg: $info;
+}

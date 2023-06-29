@@ -5,15 +5,15 @@ import './styles/swiper.scss'
 window.Swiper = Swiper;
 
 const swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3,
-  spaceBetween: 15,
-  freeMode: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+    slidesPerView: 3,
+    spaceBetween: 15,
+    freeMode: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
 });

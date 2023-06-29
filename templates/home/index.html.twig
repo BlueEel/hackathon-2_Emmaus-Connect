@@ -1,8 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Home
+{% endblock %}
 
 {% block body %}
+	<div class="container-fluid bg-info">
+		<img src="{{ asset('build/images/Logo-emmaus-connect.svg') }}" alt="">
+	</div>
     <h1 class="text-center m-4"> Listes des produits </h1>
         <div class="container swiper mySwiper">
             <div class="swiper-wrapper mt-2">
