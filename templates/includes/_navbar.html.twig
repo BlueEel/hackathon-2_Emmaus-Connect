@@ -10,50 +10,53 @@
 				class="navbar-brand" href="/">{# <img src="{{ asset('build/images/Logo-emmaus-connect.svg') }}" width="500" height="auto" class="d-inline-block align-top" alt=""> #}
 			</a>
 			{# <div class="d-flex flex-column justify-content-center bg-info p-1 rounded">
-																																								<p class="text-white mb-0 text-uppercase">Emmaüs Connect</p>
-																																							</div> #}
+																																																	<p class="text-white mb-0 text-uppercase">Emmaüs Connect</p>
+																																																</div> #}
 		</div>
 	</div>
 
 </nav>
 <div class="navbar-collapse collapse navbar-dark bg-dark dropdown" id="navbarNavDropdown">
-    <ul class="navbar-nav justify-content-center">
-        <li class="nav-item">
-            <a class="nav-link" href="">Ajouter un produit<i class="fa-solid fa-plus text-info m-3 fa-2x"></i>
-            </a>
+	<ul class="navbar-nav justify-content-center">
+		<li class="nav-item"></li>
+		<li class="nav-item">
+			<a class="nav-link" href="">Accueil<i class="fa-solid fa-house text-info m-3 fa-2x"></i>
+			</a>
+		</li>
+		<a class="nav-link" href="">Ajouter un produit<i class="fa-solid fa-plus text-info m-3 fa-2x"></i>
+		</a>
 
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="">FAQ<i class="fa-regular fa-circle-question text-info m-3 fa-2x"></i>
-            </a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="">FAQ<i class="fa-regular fa-circle-question text-info m-3 fa-2x"></i>
+		</a>
 
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="">Revendre un produit<i class="fa-solid fa-wand-magic-sparkles text-info m-3 fa-2x"></i>
-            </a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="">Revendre un produit<i class="fa-solid fa-wand-magic-sparkles text-info m-3 fa-2x"></i>
+		</a>
 
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="">Espace discussion<i class="fa-solid fa-comments text-info m-3 fa-2x"></i>
-            </a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="">Espace discussion<i class="fa-solid fa-comments text-info m-3 fa-2x"></i>
+		</a>
 
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="">Paramètres<i class="fa-brands fa-whmcs text-info m-3 fa-2x"></i>
-            </a>
-        </li>
-        {% if app.user %}
-        <li class="nav-item">
-            <a class="nav-link" href="">Déconnexion
-                <i class="fa-solid fa-power-off text-info m-3 fa-2x"></i>
-            </a>
-        </li>
-        {% else %}
-        <li class="nav-item">
-            <a class="nav-link" href="{{ path('app_login') }}">Connexion
-                <i class="fa-solid fa-power-off text-info m-3 fa-2x"></i>
-            </a>
-        </li>
-        {% endif %}
-    </ul>
-</div>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="">Paramètres<i class="fa-brands fa-whmcs text-info m-3 fa-2x"></i>
+		</a>
+	</li>
+	{% if app.user %}
+		<li class="nav-item">
+			<a class="nav-link" href="{{ path('app_logout') }}">Déconnexion
+				<i class="fa-solid fa-power-off text-info m-3 fa-2x"></i>
+			</a>
+		</li>
+	{% else %}
+		<li class="nav-item">
+			<a class="nav-link" href="{{ path('app_login') }}">Connexion
+				<i class="fa-solid fa-power-off text-info m-3 fa-2x"></i>
+			</a>
+		</li>
+	{% endif %}
+</ul></div>

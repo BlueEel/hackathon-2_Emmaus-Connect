@@ -2,19 +2,19 @@ nav {
     font-family: montserrat, sans-serif;
     font-style: normal;
     font-weight: 550;
-    --bs-secondary-bg: $info;
+    --bs-secondary-bg: $secondary;
     --bs-dark-rgb: 0, 39, 67;
 }
 
 nav button.btn.btn-dark {
-    --bs-btn-bg: $info;
-    --bs-btn-active-border-color: $info;
-    --bs-btn-border-color: $info;
+    --bs-btn-bg: $secondary;
+    --bs-btn-active-border-color: $secondary;
+    --bs-btn-border-color: $secondary;
 }
 
 nav button.navbar-toggler {
     --bs-border-width: 0px;
-    --bs-navbar-color: $info;
+    --bs-navbar-color: $secondary;
 }
 
 .navbar-toggler span {
@@ -32,7 +32,7 @@ nav button.navbar-toggler {
 }
 
 .navbar-toggler span {
-    background-color: $info;
+    background-color: $secondary;
 }
 
 .navbar-toggler span:nth-child(1) {
@@ -92,5 +92,5 @@ div.dropdown {
     font-family: montserrat, sans-serif;
     font-style: normal;
     font-weight: 550;
-    --bs-secondary-bg: $info;
+    --bs-secondary-bg: $secondary;
 }
