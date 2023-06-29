@@ -3,10 +3,12 @@ $wild-color: #ff6c71;
 $light: #fffbfb;
 
 * {
+    font-family: Roboto;
     box-sizing: border-box;
 }
 
 body {
+
     margin:0;
     background-color: $wild-color;
     color: $light;
