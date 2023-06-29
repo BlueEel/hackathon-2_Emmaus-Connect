@@ -3,13 +3,18 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
-    <div class="pink-stripe">
-        <h1>
-            Let's start coding&nbsp;&#129304;
-        </h1>
-    </div>
-    <div class="white-stripe">
-        <img src="{{ asset('build/images/LOGO_WILD_CODE_SCHOOL.png') }}"
-             alt="">
-    </div>
+    <h1 class="text-center m-4"> Listes des produits </h1>
+        <div class="container swiper mySwiper">
+            <div class="swiper-wrapper mt-2">
+                {% for product in products %}
+                    <div class="swiper-slide d-flex flex-column">
+                        <img class="object-fit-contain mb-3" src="../uploads/images/{{product.image }}" alt={{ product.image }}>
+                        <h3 alt="{{ product.name }}">{{ product.name }}</h3>
+                        <h4 alt="{{ product.price }}">{{ product.price }} €</h4>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
 {% endblock %}
