@@ -6,6 +6,9 @@
 {% block body %}
 	<section class="container-fluid vh-100 d-flex align-items-center">
 		<div class="row w-100">
+            <div class="col-lg-6 d-none d-lg-block vh-100 position-relative">
+                <img src="{{ asset('build/images/Logo-emmaus-connect.svg') }}" alt="" class="img-fluid w-60 h-60 position-absolute top-50 start-50 translate-middle">
+            </div>
 			<div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
 				<form method="post">
 					{% if error %}
@@ -32,7 +35,7 @@
 					{#
 															                    Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
 															                    See https://symfony.com/doc/current/security/remember_me.html
-					
+
 															                    <div class="checkbox mb-3">
 															                        <label>
 															                            <input type="checkbox" name="_remember_me"> Remember me
@@ -46,9 +49,6 @@
 						Me connecter
 					</button>
 				</form>
-			</div>
-			<div class="col-lg-6 d-none d-lg-block vh-100 position-relative">
-				<img src="{{ asset('build/images/Logo-emmaus-connect.svg') }}" alt="" class="img-fluid w-60 h-60 position-absolute top-50 start-50 translate-middle">
 			</div>
 		</div>
 	</section>
