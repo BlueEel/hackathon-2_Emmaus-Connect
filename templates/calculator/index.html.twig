@@ -5,12 +5,11 @@
 
 {% block body %}
 	<div class="h-100 d-flex flex-column justify-content-center">
-
 		{% block content %}
 			<div class="container">
 			<div class="row">
 				<div class="col-4  offset-4">
-					<div class="card m-auto align-items-center">
+					<div class="card m-auto align-items-center mt-5 mb-5">
 						<div class="card-body w-75">
 							<h4 class="card-title fw-bold text-start mb-3">Estimer le prix de mon téléphone :
 							</h4>
@@ -34,14 +33,17 @@
 							<div class="form-group mb-3">
 								{{ form_row(CalculatorForm.releaseYear, {'attr': {'class' : ' ms-2'}}) }}
 							</div>
-
+                            <div class="form-group mb-3">
+                                {{ form_row(CalculatorForm.status, {'attr': {'class' : 'form-control
+                            w-100'}}) }}
+                            </div>
                             <div class="text-center">
                                 <button type="submit" class="text-center rounded-pill btn btn-secondary
                                 ms-auto me-auto mt-1 ps-5 pe-5">
                                     Estimation
                                 </button>
                             </div>
-							{{ form_end(CalculatorForm) }}
+                            {{ form_end(CalculatorForm) }}
 						</div>
 					</div>
 				</div>
