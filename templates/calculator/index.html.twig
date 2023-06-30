@@ -9,34 +9,37 @@
 		{% block content %}
 			<div class="container">
 			<div class="row">
-				<div class="col-4 offset-4">
-					<div class="card m-auto bg-secondary align-items-center">
+				<div class="col-4  offset-4">
+					<div class="card m-auto align-items-center">
 						<div class="card-body w-75">
-							<h4 class="card-title text-center">Estimer le prix de mon téléphone:
+							<h4 class="card-title fw-bold text-start mb-3">Estimer le prix de mon téléphone :
 							</h4>
-							{{ form_errors(CalculatorForm, {'attr': {'class': 'bg-primary'}}) }}
+							{{ form_errors(CalculatorForm, {'attr': {'class': 'bg-danger'}}) }}
 							{{ form_start(CalculatorForm) }}
-							<div class="form-group mb-2">
-								{{ form_row(CalculatorForm.brand, {'attr': {'class': 'form-control
-                     w-100'}}) }}
+							<div class="form-group mb-3">
+								{{ form_row(CalculatorForm.brand, {'attr': {'class' : 'form-control
+                            w-100'}}) }}
 							</div>
-							<div class="form-group mb-2">
-								{{ form_row(CalculatorForm.modele, {'attr': {'class': 'form-control
-                     w-100'}}) }}
+							<div class="form-group mb-3">
+								{{ form_row(CalculatorForm.modele, {'attr': {'class' : 'form-control
+                            w-100'}}) }}
 							</div>
-							<div class="form-group mb-2">
-								{{ form_row(CalculatorForm.internalmemory, {'attr': {'class': 'form-control
-                    '}}) }}
+							<div class="form-group mb-3">
+								{{ form_row(CalculatorForm.internalmemory, {'attr': {'class' : 'form-control
+                            '}}) }}
 							</div>
-							<div class="form-group mb-2">
-								{{ form_row(CalculatorForm.ram, {'attr': {'class': ' ms-2'}}) }}
+							<div class="form-group mb-3">
+								{{ form_row(CalculatorForm.ram, {'attr': {'class' : ' ms-2 '}}) }}
 							</div>
-							<div class="form-group mb-2">
-								{{ form_row(CalculatorForm.releaseYear, {'attr': {'class': ' ms-2'}}) }}
+							<div class="form-group mb-3">
+								{{ form_row(CalculatorForm.releaseYear, {'attr': {'class' : ' ms-2'}}) }}
 							</div>
-							<button type="submit" class="btn btn-success  ms-auto me-auto mt-3">
-								Estimer
-							</button>
+                            <div class="text-center">
+                                <button type="submit" class="text-center rounded-pill btn btn-secondary
+                                ms-auto me-auto mt-1 ps-5 pe-5">
+                                    Estimation
+                                </button>
+                            </div>
 							{{ form_end(CalculatorForm) }}
 						</div>
 					</div>
