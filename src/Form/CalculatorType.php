@@ -68,7 +68,23 @@ class CalculatorType extends AbstractType
                 'widget' => 'single_text',
                 'format' => 'yyyy',
                 'html5' => false,
-            ]);
+            ])
+
+            ->add('status', ChoiceType::class, [
+                'placeholder' => 'Sélectionnez l\'état du téléphone',
+                'label' => 'Etat: ',
+                'choices' => [
+                    'DEEE'=> 'DEEE',
+                    'REPARABLE'=> 'REPARABLE',
+                    'BLOQUE'=> 'BLOQUE',
+                    'RECONDITIONABLE'=> 'RECONDITIONABLE',
+                    'RECONDITIONNE'=> 'RECONDITIONNE',
+                ],
+                'constraints' => [
+                    new NotBlank([
+                        'message' => 'Veuillez indiquer l\état du téléphone',
+                    ])],
+                    ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

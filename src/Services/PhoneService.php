@@ -11,9 +11,13 @@ class PhoneService
         $this->PhoneRepository = $phoneRepository;
     }
 
-    public function calculerPrixTelephone(string $brand, string $internalmemory, int $ram, string $releaseYear): int
+    public function calculerPrixTelephone(string $brand, string $internalmemory, int $ram, string $releaseYear, string $status): int
     {
         $prixBase = 350;
+        $pourcentageDeee= 0;
+        $pourcentageReparable= 0.5;
+        $pourcentageBloque= 0.90;
+        $pourcentageReconditionable= 0.95;
 
         switch ($brand) {
             case 'Apple':
@@ -58,6 +62,18 @@ class PhoneService
             $prixBase += 25;
         } else {
             $prixBase -= 0;
+        }
+
+        if ($status === 'DEEE') {
+            $prixBase *= $pourcentageDeee;
+        } elseif ($status === 'REPARABLE') {
+            $prixBase *= $pourcentageReparable;
+        } elseif ($status === 'BLOQUE') {
+            $prixBase *= $pourcentageBloque;
+        }elseif ($status === ' RECONDITIONABLE') {
+            $prixBase *= $pourcentageReconditionable;
+        }elseif ($status === 'RECONDITIONNE') {
+            $prixBase *= (1);
         }
 
         return $prixBase;

@@ -15,11 +15,10 @@ class CalculatorController extends AbstractController
 {
     #[Route('/calculator', name: 'app_calculator')]
     public function index(
-        Request $request, 
-        PhoneService $phoneService, 
+        Request $request,
+        PhoneService $phoneService,
         EntityManagerInterface $entityManager,
-        ): Response
-    {
+    ): Response {
         $Phone = new Phone();
 
         $form = $this->createForm(CalculatorType::class, $Phone);
@@ -36,7 +35,8 @@ class CalculatorController extends AbstractController
             if ($date instanceof \DateTimeInterface) {
                 $releaseYear = $date->format('Y');
             }
-            $result = $phoneService->calculerPrixTelephone($brand, $internalmemory, $ram, $releaseYear);
+            $status = $data->getStatus();
+            $result = $phoneService->calculerPrixTelephone($brand, $internalmemory, $ram, $releaseYear, $status);
 
             $entityManager->persist($Phone);
             $entityManager->flush();
