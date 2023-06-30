@@ -11,22 +11,22 @@
 			</div>
 		{% endfor %}
 	{% endfor %}
-	<div class="container">
+	<div class="container h-75">
 		<div class="row">
-			<div class="col-4 offset-4">
-				<div class="card m-auto bg-secondary align-items-center">
+			<div class="col-4 offset-4 p-2">
+				<div class="card m-auto align-items-center">
 					<div class="card-body w-75">
-						<h4 class="card-title text-center">Intégration du télephone:
+						<h4 class="card-title text-center fw-bold mt-3 mb-5">Estimation du télephone :
 						</h4>
-                        <p class="card-title ">Marque du téléphone: {{ phone.brand }}</p>
-						<p class="card-title ">Mémoire interne: {{ phone.internalmemory }}</p>
-                        <p class="card-title ">Ram du téléphone: {{ phone.ram }}</p>
-                        <p class="card-title ">Marque du téléphone:</p> 
-						<h4 class="card-title text-center bg-primary"> Estimation du prix : {{ result }}€</h4>
+                        <p class="card-title mb-3">Marque du téléphone : {{ phone.brand }} </p>
+                        <p class="card-title mb-3">Modèle du téléphone : {{ phone.modele }}</p>
+						<p class="card-title mb-3">Mémoire interne : {{ phone.internalmemory }} Giga</p>
+                        <p class="card-title mb-3">Ram du téléphone : {{ phone.ram }} Giga</p>
+{#                        <p class="card-title ">Année du téléphone : {{ phone.releaseYear }}</p>#}
+						<h4 class="card-title text-center fw-bold mt-5"> Estimation du prix : {{ result }} €</h4>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
 {% endblock %}

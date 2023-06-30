@@ -8,8 +8,8 @@
 		<img src="{{ asset('build/images/Logo-emmaus-connect.svg') }}" alt="">
 	</div>
     <h1 class="text-center m-4"> Listes des produits </h1>
-        <div class="container swiper mySwiper">
-            <div class="swiper-wrapper mt-2">
+        <div class="container swiper mySwiper mt-2 mb-5">
+            <div class="swiper-wrapper">
                 {% for product in products %}
                     <div class="swiper-slide d-flex flex-column">
                         <img class="object-fit-contain mb-3" src="../uploads/images/{{product.image }}" alt={{ product.image }}>
