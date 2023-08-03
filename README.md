@@ -97,6 +97,10 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 Wild Code School trainers team
 
+## Team Hackathon 2 
+- Name = BENEVOLE-CONNECT
+- Titouan, Arthur, Alexandre, Joss, and Baptiste 
+
 ## License
 
 MIT License
